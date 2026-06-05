@@ -13,6 +13,27 @@ return {
     end,
   },
 
+  {
+    "pocco81/auto-save.nvim",
+    lazy = false,
+  },
+  {
+    "github/copilot.vim",
+    lazy = false,
+  },
+  {
+    "arnamak/stay-centered.nvim",
+    config = function()
+      require("stay-centered").setup()
+    end,
+    lazy = false,
+  },
+  {
+    "Aasim-A/scrollEOF.nvim",
+    event = { "CursorMoved", "WinScrolled" },
+    opts = {},
+  },
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
