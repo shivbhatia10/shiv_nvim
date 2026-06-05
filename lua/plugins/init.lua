@@ -13,6 +13,13 @@ return {
     end,
   },
 
+  -- auto-install LSP servers / tools so a fresh clone just works
+  {
+    "mason-org/mason.nvim",
+    event = "VeryLazy",
+    opts = { ensure_installed = { "rust-analyzer" } },
+  },
+
   {
     "pocco81/auto-save.nvim",
     lazy = false,
