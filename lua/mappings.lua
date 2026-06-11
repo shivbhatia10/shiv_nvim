@@ -34,7 +34,4 @@ map("n", "<leader>tr", "<cmd>TestNearest<CR>", { desc = "test: run nearest" })
 map("n", "<leader>tf", "<cmd>TestFile<CR>", { desc = "test: file" })
 map("n", "<leader>tl", "<cmd>TestLast<CR>", { desc = "test: last" })
 
-map("n", "<leader>gd", "<cmd>DiffviewOpen<CR>", { desc = "diffview: open" })
-map("n", "<leader>gh", "<cmd>DiffviewFileHistory %<CR>", { desc = "diffview: file history" })
-
 map("n", "<leader>sr", "<cmd>GrugFar<CR>", { desc = "search & replace (grug-far)" })

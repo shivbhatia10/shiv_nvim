@@ -69,12 +69,6 @@ return {
   },
 
   {
-    "sindrets/diffview.nvim",
-    cmd = { "DiffviewOpen", "DiffviewFileHistory" },
-    opts = {},
-  },
-
-  {
     "MagicDuck/grug-far.nvim",
     cmd = "GrugFar",
     opts = {},
