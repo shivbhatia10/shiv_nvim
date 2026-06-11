@@ -81,10 +81,6 @@ return {
   },
 
   {
-    "pocco81/auto-save.nvim",
-    lazy = false,
-  },
-  {
     "arnamak/stay-centered.nvim",
     config = function()
       require("stay-centered").setup()
