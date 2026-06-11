@@ -4,7 +4,6 @@ return {
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -12,11 +11,13 @@ return {
     end,
   },
 
-  -- auto-install LSP servers / tools so a fresh clone just works
   {
-    "mason-org/mason.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
     event = "VeryLazy",
-    opts = { ensure_installed = { "rust-analyzer" } },
+    dependencies = { "mason-org/mason.nvim" },
+    opts = {
+      ensure_installed = { "rust-analyzer", "stylua" },
+    },
   },
 
   {
@@ -35,17 +36,4 @@ return {
     event = { "CursorMoved", "WinScrolled" },
     opts = {},
   },
-
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
 }
