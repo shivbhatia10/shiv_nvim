@@ -30,10 +30,6 @@ map("n", "<leader>ih", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = b }, { bufnr = b })
 end, { desc = "toggle inlay hints" })
 
-map("n", "<leader>cl", function()
-  vim.lsp.codelens.run()
-end, { desc = "run codelens action" })
-
 map("n", "<leader>tr", function()
   require("neotest").run.run()
 end, { desc = "test: run nearest" })
