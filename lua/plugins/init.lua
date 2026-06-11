@@ -1,7 +1,6 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = "BufWritePre",
     opts = require "configs.conform",
   },
 
@@ -23,6 +22,7 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    lazy = false,
     opts = function(_, opts)
       opts.ensure_installed = opts.ensure_installed or {}
       vim.list_extend(opts.ensure_installed, { "rust", "toml", "haskell", "ocaml", "ocaml_interface" })

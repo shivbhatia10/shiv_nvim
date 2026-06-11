@@ -3,11 +3,6 @@ local options = {
     lua = { "stylua" },
     rust = { "rustfmt" },
   },
-
-  format_on_save = {
-    timeout_ms = 500,
-    lsp_format = "fallback",
-  },
 }
 
 return options
