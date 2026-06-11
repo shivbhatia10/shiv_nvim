@@ -31,10 +31,12 @@ map("n", "<leader>ih", function()
 end, { desc = "toggle inlay hints" })
 
 map("n", "<leader>tr", function()
+  require("neotest").output_panel.clear()
   require("neotest").run.run()
 end, { desc = "test: run nearest" })
 
 map("n", "<leader>tf", function()
+  require("neotest").output_panel.clear()
   require("neotest").run.run(vim.fn.expand "%")
 end, { desc = "test: run file" })
 
