@@ -31,6 +31,11 @@ return {
   },
 
   {
+    "mrcjkb/rustaceanvim",
+    lazy = false,
+  },
+
+  {
     "saecki/crates.nvim",
     event = { "BufRead Cargo.toml" },
     opts = {},
@@ -55,19 +60,11 @@ return {
   },
 
   {
-    "nvim-neotest/neotest",
-    dependencies = {
-      "nvim-neotest/nvim-nio",
-      "nvim-lua/plenary.nvim",
-      "antoinemadec/FixCursorHold.nvim",
-      "rouge8/neotest-rust",
-    },
+    "vim-test/vim-test",
+    cmd = { "TestNearest", "TestFile", "TestSuite", "TestLast", "TestVisit" },
     config = function()
-      require("neotest").setup {
-        adapters = {
-          require "neotest-rust",
-        },
-      }
+      vim.g["test#strategy"] = "neovim"
+      vim.g["test#neovim#term_position"] = "botright"
     end,
   },
 

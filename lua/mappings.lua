@@ -30,27 +30,9 @@ map("n", "<leader>ih", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = b }, { bufnr = b })
 end, { desc = "toggle inlay hints" })
 
-map("n", "<leader>tr", function()
-  require("neotest").output_panel.clear()
-  require("neotest").run.run()
-end, { desc = "test: run nearest" })
-
-map("n", "<leader>tf", function()
-  require("neotest").output_panel.clear()
-  require("neotest").run.run(vim.fn.expand "%")
-end, { desc = "test: run file" })
-
-map("n", "<leader>ts", function()
-  require("neotest").summary.toggle()
-end, { desc = "test: toggle summary" })
-
-map("n", "<leader>to", function()
-  require("neotest").output.open { enter = true }
-end, { desc = "test: output (float)" })
-
-map("n", "<leader>tO", function()
-  require("neotest").output_panel.toggle()
-end, { desc = "test: output panel" })
+map("n", "<leader>tr", "<cmd>TestNearest<CR>", { desc = "test: run nearest" })
+map("n", "<leader>tf", "<cmd>TestFile<CR>", { desc = "test: file" })
+map("n", "<leader>tl", "<cmd>TestLast<CR>", { desc = "test: last" })
 
 map("n", "<leader>gd", "<cmd>DiffviewOpen<CR>", { desc = "diffview: open" })
 map("n", "<leader>gh", "<cmd>DiffviewFileHistory %<CR>", { desc = "diffview: file history" })
