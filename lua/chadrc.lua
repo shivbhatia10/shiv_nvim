@@ -3,6 +3,12 @@ local M = {}
 
 M.base46 = {
   theme = "gruvbox_light",
+  hl_override = {
+    -- darken comments: @comment (treesitter) is what colors code comments;
+    -- Comment covers non-treesitter buffers. -10 = 10% darker, more negative = darker.
+    Comment = { fg = { "grey_fg", -10 } },
+    ["@comment"] = { fg = { "grey_fg", -10 } },
+  },
 }
 
 M.ui = {
