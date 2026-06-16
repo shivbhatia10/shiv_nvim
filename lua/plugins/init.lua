@@ -16,7 +16,7 @@ return {
     event = "VeryLazy",
     dependencies = { "mason-org/mason.nvim" },
     opts = {
-      ensure_installed = { "rust-analyzer", "stylua", "haskell-language-server" },
+      ensure_installed = { "rust-analyzer", "stylua", "haskell-language-server", "marksman" },
     },
   },
 

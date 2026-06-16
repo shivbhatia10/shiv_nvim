@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "rust_analyzer", "hls", "ocamllsp" }
+local servers = { "html", "cssls", "rust_analyzer", "hls", "ocamllsp", "marksman" }
 vim.lsp.enable(servers)
 
 local augroup = vim.api.nvim_create_augroup("UserLsp", { clear = true })
