@@ -55,6 +55,13 @@ return {
   },
 
   {
+    -- right-edge scrollbar with git-hunk / diagnostic / search ticks (reads gitsigns data)
+    "lewis6991/satellite.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
+
+  {
     "vim-test/vim-test",
     cmd = { "TestNearest", "TestFile", "TestSuite", "TestLast", "TestVisit" },
     config = function()
