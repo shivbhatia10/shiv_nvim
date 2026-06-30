@@ -31,6 +31,16 @@ return {
   },
 
   {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        -- filename first, dir path after — the filename is never truncated away
+        path_display = { "filename_first" },
+      },
+    },
+  },
+
+  {
     "saecki/crates.nvim",
     event = { "BufRead Cargo.toml" },
     opts = {},
