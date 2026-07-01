@@ -20,6 +20,10 @@ map("n", "<leader>gb", function()
   vim.cmd "Gitsigns blame"
 end, { desc = "git blame current file (toggle)" })
 
+map("n", "<leader>gd", "<cmd>DiffviewOpen<CR>", { desc = "diffview: open (diff / merge conflicts)" })
+map("n", "<leader>gh", "<cmd>DiffviewFileHistory %<CR>", { desc = "diffview: current file history" })
+map("n", "<leader>gq", "<cmd>DiffviewClose<CR>", { desc = "diffview: close" })
+
 map("n", "<leader>dd", "<cmd>Trouble diagnostics toggle<CR>", { desc = "trouble diagnostics (workspace)" })
 map("n", "<leader>db", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", { desc = "trouble diagnostics (buffer)" })
 
